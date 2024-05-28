@@ -8,7 +8,7 @@ app = Flask(__name__)
 conn = psycopg2.connect("dbname=gloliwoe user=gloliwoe password=DzE9p8MVZgwbohsY4iXuO-R7tCmBr-TI host=fanny.db.elephantsql.com port=5432")
 cur = conn.cursor()   
 
-DROPBOX_ACCESS_TOKEN = 'sl.B2D54HuOOyGPK23WcQC79aP6ZN56UbWdgzrayNy2CpaY4w-hrH1uHtWy1cRcThsOlWKm6nFVgF7reH9Cgpn6KyrKREnGKRhG07et6QirEHohz8Nfl_qQRffLju5e3y2fNTgcwyaJA2Dbv_Y'
+DROPBOX_ACCESS_TOKEN = 'sl.B2H2JPUixzXH4bhVtjbD51NKgqXQ00LyMtxCMm60zckp7gieJRdkaDiUJ9T71geF1JUAO-_1PchVnxhPUCIY3R8urCYbAKydm8unKKJcOBl756TW0YikoKjQX4bfJJzJvMCWvnxPGzgdshk'
 dbx = dropbox.Dropbox(DROPBOX_ACCESS_TOKEN)
 
 
