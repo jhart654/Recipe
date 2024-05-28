@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <style>
+        .home {
+            background-image: url(static/anna-pelzer-IGfIGP5ONV0-unsplash.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+
+        .head {
+            align-items: center;
+            color: white;
+            background-color: rgba(0, 0, 0, .4);
+            height: 100vh;
+            padding-top: 20%;
+        }
+        #title-head {
+            padding-left: 37%;
+            font-weight: bolder;
+            font-size: 100px;
+            text-decoration: underline;
+        }
+
+        #description {
+            color: beige;
+            padding-left: 15%;
+            padding-right: 15%;
+            padding-top: 3%;
+        }
+
+    </style>
+
+    <div class="home">
+        <div  class="head">
+        <h1 id="title-head">Taystie</h1>
+        
+        <h5 id="description">Welcome to Taystie! Here, you can create your own delicious recipes, upload
+            stunning photos, and share your culinary creations with fellow food enthusiasts.
+            Whether you're a seasoned chef or a home cook, Taystie offers an easy and fun way
+            to document and showcase your favorite dishes. Join us and inspire others with your
+            unique flavors and creative presentations!
+        </h5>
+    </div>
+    </div>
+{% endblock %}

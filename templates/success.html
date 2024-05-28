@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <style>
+        .home1 {
+            background-color: aqua;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            
+            
+        }
+
+        .head1 {
+            align-items: center;
+            color: white;
+            background-color: rgba(0, 0, 0, .4);
+            height: 100vh;
+            padding-top: 20%;
+        }
+        #success-head {
+            text-align: center;
+            font-weight: bolder;
+            font-size: 50px;
+            text-decoration: underline;
+        }
+
+    
+    </style>
+
+    <div class="home1">
+        <div  class="head1">
+        <h1 id="success-head">RECIPE SUCCESSFULLY SUBMITTED</h1>
+        
+    
+    </div>
+    </div>
+{% endblock %}

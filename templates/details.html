@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<style>
+    .details {
+        background-color: beige;
+        color: blue;
+        padding: 10%;
+        text-align: center;
+    }
+    h5 {
+        font-weight: bold;
+    }
+</style>
+
+<body class="details">
+    <h5>Recipe Name:</h5> 
+    <p>{{ item[1] }}</p>
+    <a href="{{ item[8] }}"><h6>Photo</h6></a>
+    <h5>Ingredients:</h5>
+     <p>{{ item[2] }}</p>
+    <h5>Instructions:</h5>
+     <p>{{ item[3] }}</p>
+    <h5>Cooking Time (in minutes):</h5>
+     <p>{{ item[4] }}</p>
+    <h5>Difficulty Level:</h5>
+     <p>{{ item[5] }}</p>
+    <h5>Meal Type:</h5>
+     <p>{{ item[6] }}</p>
+    <h5>Cuisine Type:</h5>
+     <p>{{ item[7] }}</p>
+
+    <a href="/recipe">Back to Recipe List</a>
+</body>
+
+{% endblock %}

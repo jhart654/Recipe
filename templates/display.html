@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<style>
+    .home2 {
+        background-image: url(static/kevin-mccutcheon-APDMfLHZiRA-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        
+        
+    }
+
+    .head2 {
+        align-items: center;
+        color: white;
+        background-color: rgba(0, 0, 0, .7);
+        height: 100vh;
+        padding-top: 5%;
+    }
+    #success-head1 {
+        text-align: center;
+        font-weight: bolder;
+        font-size: 50px;
+        text-decoration: underline;
+    }
+
+    .hyperlink {
+        text-decoration: none;
+        display: block;
+        font-size: 50px;
+        font-weight: bold;
+        color: skyblue;
+        
+    }
+
+    #recipe-title {
+        font-weight: bolder;
+        font-size: 100px;
+        text-decoration: underline;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+
+</style>
+
+<div class="home2">
+    <div  class="head2">
+    <h1 id="recipe-title">Recipes</h1>
+    <ul>
+    {% for item in items %}
+
+    <li><a href="/details/{{ item[0] }}" class="hyperlink">{{ item[1] }}</a></li>
+    
+    {% endfor %}
+    </ul>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<style>
+    .create {
+        background-image: url(static/freddy-g-1i1zPbkQJNg-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        
+    }
+
+    form {
+       
+        background-color: rgba(245, 245, 220, .7);
+        margin-top: 3%;
+        margin-left: 25%;
+        margin-right: 25%;
+        padding-left: 5%;
+        border-radius: 10px;
+        padding-top: 2%;
+    }
+
+    label {
+        padding-left: 35%;
+        font-weight: bold;
+    }
+    input {
+        width: 550px;
+    }
+
+    #submit {
+        background-color: yellow;
+        font-weight: bold;
+        width: 100px;
+        margin-left: 35%;
+    }
+
+    select {
+        width: 550px
+    }
+</style>
+<div class="create">
+    <h1>Enter Recipe</h1>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <label for="recipe_name">Recipe Name:</label><br>
+        <input type="text" id="recipe_name" name="recipe_name"><br><br>
+
+        <label for="ingredients">Ingredients:</label><br>
+        <input type="text" id="ingredients" name="ingredients"><br><br>
+
+        <label for="instructions">Instructions:</label><br>
+        <input type="text" id="instructions" name="instructions"><br><br>
+
+        <label for="cooking_time">Cooking Time (in minutes):</label><br>
+        <input type="text" id="cooking_time" name="cooking_time"><br><br>
+
+        <label for="difficulty_level">Difficulty Level:</label><br>
+        <select  id="difficulty_level" name="difficulty_level">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <br><br>
+        <label for="meal_type">Meal Type:</label><br>
+        <select id="meal_type" name="meal_type">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <option value="brunch">Brunch</option>
+            <option value="snack">Snack</option>
+        </select>
+        <br><br>
+        <label for="cuisine_type">Cuisine Type:</label><br>
+        <input type="text" id="cuisine_type" name="cuisine_type"><br><br>
+
+        <label for="photo">Photo:</label><br>
+        <input type="file" id="photo" name="photo" accept="image/*"><br><br>
+
+        <input id="submit" type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}
